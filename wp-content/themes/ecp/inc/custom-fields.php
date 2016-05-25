@@ -54,7 +54,7 @@ acf_add_local_field_group(array (
 			array (
 				'param' => 'page',
 				'operator' => '==',
-				'value' => '15',
+				'value' => '8',
 			),
 		),
 	),
