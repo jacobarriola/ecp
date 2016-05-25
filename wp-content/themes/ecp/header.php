@@ -76,6 +76,13 @@
       <li>
         <a href="">
           <svg class="icon">
+            <use xlink:href="#linkedin2"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <svg class="icon">
             <use xlink:href="#facebook"></use>
           </svg>
         </a>
