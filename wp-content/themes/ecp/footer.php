@@ -10,25 +10,56 @@
  */
 ?>
 
-			</div><!-- #content -->
+</div><!-- #content -->
 
-			<footer id="colophon" class="site-footer" role="contentinfo">
+<footer class="site-footer" role="contentinfo">
 
-				<div class="column row">
+	<div class="row">
 
-					<p class="text-center">
-						<svg class="specific-icon icon">
-							<use xlink:href="#fi-graph-pie"></use>
-						</svg>
-						This is the footer</p>
+		<div class="medium-centered medium-9 columns">
 
-				</div><!-- .column.row -->
+			<div class="row">
+				<div class="medium-5 columns">
+					<h2 class="footer-header">Contact Us</h2>
+					<p>If you have questions or comments, we'd love to hear from you.</p>
+					<ul class="footer-social">
+						<li>
+			        <a href="">
+			          <svg class="icon">
+			            <use xlink:href="#facebook"></use>
+			          </svg>
+			        </a>
+			      </li>
+			      <li>
+			        <a href="">
+			          <svg class="icon">
+			            <use xlink:href="#instagram"></use>
+			          </svg>
+			        </a>
+			      </li>
+			      <li>
+			        <a href="">
+			          <svg class="icon">
+			            <use xlink:href="#twitter"></use>
+			          </svg>
+			        </a>
+			      </li>
+					</ul>
+				</div>
 
-			</footer><!-- #colophon -->
+				<div class="medium-7 columns">
 
-		</div> <!-- .off-canvas-content -->
-	</div><!-- .off-canvas-wrapper-inner -->
-</div><!-- .off-canvas-wrapper -->
+				</div>
+			</div>
+
+
+		</div>
+
+	</div><!-- .column.row -->
+
+</footer><!-- #colophon -->
+
+
 
 <?php wp_footer(); ?>
 </body>

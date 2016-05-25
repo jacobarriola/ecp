@@ -23,45 +23,85 @@
 
 <?php echo file_get_contents( get_template_directory() . '/assets/dist/sprite/sprite.svg' ); ?>
 
+<?php if( is_front_page() ) {
+  $site_tag = 'h1';
+} else {
+  $site_tag = 'h2';
+} ?>
 
-<div class="off-canvas-wrapper">
-  <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
-    <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas data-position="left">
-			<button class="close-button" aria-label="Close alert" type="button" data-toggle="offCanvasLeft">
-				<span aria-hidden="true">&times;</span>
-			</button>
-			<a href="<?php bloginfo('url'); ?>" class="ofc-home">Home</a>
+  <div class="js-menu-screen sliding-menu-fade-screen"></div>
+
+  <div class="offcanvas js-menu">
+
+		<span class="close-offcanvas js-menu-screen">&#215;</span>
+
+    <nav class="offcanvas-navigation" role="navigation">
+
+      <?php
+      wp_nav_menu( array(
+        'theme_location' => 'primary',
+        'container'      => false,
+        'menu_class'     => 'offcanvas-menu',
+        'depth'          => 1,
+      ) );
+      ?>
+
+    </nav><!-- #site-navigation -->
+
+  </div>
+
+	<header class="masthead row column" role="banner">
+
+		<<?php echo $site_tag; ?> class="site-title">
+			<a href="<?php esc_attr_e( home_url( '/' ) ); ?>" rel="home">
+				<?php bloginfo( 'name' ); ?>
+			</a>
+		</<?php echo $site_tag; ?>>
+
+
+		<nav class="site-navigation" role="navigation">
+
 			<?php
-			 $args = array (
-				 'theme_location' 	=> 'primary',
-				 'container' 				=> 'nav',
-				 'container_class'	=> 'offcanvas-navigation',
-				 'menu_class' 			=> 'mobile-menu',
-			 );
-				wp_nav_menu( $args );
-			?>
-    </div><!-- #offCanvasLeft -->
-    <div class="off-canvas-content" data-off-canvas-content>
-			<div class="title-bar show-for-small-only">
-			  <div class="title-bar-left">
-			    <button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
-			    <span class="title-bar-title"><?php bloginfo( 'name' ); ?></span>
-			  </div>
-			</div><!-- .title-bar -->
-			<header id="masthead" class="" role="banner">
-				<section class="row column">
-					<h1 class="site-title">
-						<a href="<?php esc_attr_e( home_url( '/' ) ); ?>" rel="home">
-							<?php bloginfo( 'name' ); ?>
-						</a>
-					</h1>
-					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-				</section>
-				<nav id="site-navigation" class="top-bar show-for-medium" data-topbar role="navigation">
-					<section class="top-bar-section row column">
-						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-					</section>
-				</nav><!-- #site-navigation -->
-			</header><!-- #masthead -->
+      wp_nav_menu( array(
+        'theme_location' => 'primary',
+        'container'      => false,
+        'menu_class'     => 'navigation-menu',
+        'depth'          => 1,
+      ) );
+      ?>
 
-			<div id="content" class="site-content">
+		</nav><!-- #site-navigation -->
+
+    <ul class="header-social">
+      <li>
+        <a href="">
+          <svg class="icon">
+            <use xlink:href="#facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <svg class="icon">
+            <use xlink:href="#instagram"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <svg class="icon">
+            <use xlink:href="#twitter"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+
+    <div class="hamburger-wrapper">
+      <a class="js-menu-trigger sliding-menu-button">
+        <span class="hamburger"></span>
+      </a>
+    </div>
+
+  </header><!-- .masthead -->
+
+	<div class="site-content">

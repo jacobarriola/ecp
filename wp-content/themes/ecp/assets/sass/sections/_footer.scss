@@ -1,5 +1,27 @@
-#colophon {
-	background: #eee;
-	padding: 3rem 0;
-	color: transparentize(#000, .7);
+.site-footer {
+	background: color('grey');
+	color: color('white');
+	padding-top: 3em;
+	padding-bottom: 3em;
+}
+
+.footer-header {
+	text-transform: uppercase;
+
+	@include breakpoint(medium) {
+		font-size: 1.5em;
+	}
+}
+
+.footer-social {
+	@include reset-list;
+	display: flex;
+
+	li {
+		margin-right: 1em;
+	}
+
+	a {
+		color: color('white');
+	}
 }
