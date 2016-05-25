@@ -36,17 +36,33 @@ get_header(); ?>
 
 </div>
 
-<div class="home-testimonial">
-	<div class="row">
+<?php
+	// Fetch a random testimonial
+	$args = array(
+		'post_type' 		=> 'testimonial',
+		'order_by'			=> 'rand',
+		'post_per_page'	=> 1,
+	);
+	$query = new WP_Query( $args );
 
-		<div class="large-8 columns home-testimonial-content">
-			<h3 class="testimonial-header">"Whatever you do, or dream you can, begin it. Boldness has genius and power
-			and magic behind it."</h3>
-			<cite>John Wolgang von Goethe</cite>
+ if( $query->have_posts() ) : ?>
+
+	<div class="home-testimonial">
+		<div class="row">
+			<div class="large-8 columns home-testimonial-content">
+
+				<?php	while ( $query->have_posts() ) : $query->the_post(); ?>
+
+					<h3 class="testimonial-header">"<?php the_field('testimonial'); ?>"</h3>
+					<cite><?php the_field('person'); ?></cite>
+					
+				<?php endwhile; wp_reset_postdata(); ?>
+
+			</div>
 		</div>
-
 	</div>
-</div>
+
+<?php endif; ?>
 
 
 <div class="what-we-do">

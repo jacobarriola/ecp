@@ -137,7 +137,7 @@ endif;
  */
 function ecp_scripts() {
 
-	// Enqueue Google Fonts	
+	// Enqueue Google Fonts
 	wp_enqueue_style( 'googlefonts',
 		'https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto:300'
 	);
@@ -162,6 +162,16 @@ function ecp_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'ecp_scripts' );
 
+
+/**
+ * Custom post types for this theme.
+ */
+require get_template_directory() . '/inc/custom-post-types.php';
+
+/**
+ * Custom fields for this theme.
+ */
+require get_template_directory() . '/inc/custom-fields.php';
 
 /**
  * Custom template tags for this theme.
