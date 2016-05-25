@@ -23,12 +23,6 @@
 
 <?php echo file_get_contents( get_template_directory() . '/assets/dist/sprite/sprite.svg' ); ?>
 
-<?php if( is_front_page() ) {
-  $site_tag = 'h1';
-} else {
-  $site_tag = 'h2';
-} ?>
-
   <div class="js-menu-screen sliding-menu-fade-screen"></div>
 
   <div class="offcanvas js-menu">
@@ -46,9 +40,15 @@
       ) );
       ?>
 
-    </nav><!-- #site-navigation -->
+    </nav>
 
   </div>
+
+  <?php if( is_front_page() ) {
+    $site_tag = 'h1';
+  } else {
+    $site_tag = 'h2';
+  } ?>
 
 	<header class="masthead row column" role="banner">
 
