@@ -44,7 +44,8 @@
 // z-index management
 $layers: (
 	nav: 1,
-	header: 2
+	offcanvas-screen: 2,
+	mobile-offcanvas: 3
 );
 
 @mixin z-index($layer-name) {

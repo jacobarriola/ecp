@@ -1,4 +1,12 @@
 input[type="submit"],
 input[type="button"] {
   @include button;
+  font-family: $header-font-family;
+  text-transform: uppercase;
+}
+
+button,
+.button {
+  font-family: $header-font-family;
+  text-transform: uppercase;
 }

@@ -1,0 +1,125 @@
+.home-hero {
+  background: color('grey');
+  height: 300px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  @include breakpoint(medium) {
+    background: color('grey') url('../../img/texture-overlay.png') no-repeat;
+    background-size: cover;
+    height: 550px;
+    align-items: flex-end;
+    padding-bottom: 4em;
+    text-align: left;
+  }
+}
+
+.home-hero-content {
+  color: color('white');
+}
+
+.hero-header {
+  @include breakpoint(medium) {
+    font-size: 3em;
+    margin-bottom: 0;
+  }
+}
+
+.hero-tagline {
+  font-family: $header-font-family;
+  font-weight: $weight-light;
+
+  @include breakpoint(medium) {
+    font-size: 2em;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// What is
+////////////////////////////////////////////////////////////////////////////////
+
+.home-what {
+  padding-top: 5em;
+  padding-bottom: 5em;
+
+  .button {
+    @include breakpoint(small only) {
+      margin-bottom: 4em;
+    }
+  }
+}
+
+.what-copy {
+  font-size: .875em;
+
+  @include breakpoint(medium) {
+    margin-bottom: 4em;
+
+  }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// What we do
+////////////////////////////////////////////////////////////////////////////////
+
+.what-we-do {
+  @include breakpoint(medium) {
+    background: color('grey') url('../../img/what-we-do-bg.jpg') no-repeat;
+    background-size: cover;
+  }
+}
+
+.what-we-do-content {
+  display: flex;
+}
+
+.what-we-do-img {
+  display: none;
+
+  @include breakpoint(medium) {
+    display: inline-block;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 4em;
+    margin-bottom: 4em;
+
+    img {
+      padding: .75em;
+      border: 5px solid color('white');
+    }
+  }
+}
+
+.what-we-do-copy {
+  background: color('white');
+  padding: 4em 0;
+
+  @include breakpoint(medium) {
+    padding: 4em 3em;
+    margin-left: auto;
+    width: 400px;
+  }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Testimonial
+////////////////////////////////////////////////////////////////////////////////
+
+.home-testimonial {
+  background-color: color('grey', 'light');
+  padding-top: 5em;
+  padding-bottom: 5em;
+
+  cite {
+    &::before {
+      content: '';
+    }
+  }
+}
+
+.testimonial-header {
+  line-height: 1.2;
+}
