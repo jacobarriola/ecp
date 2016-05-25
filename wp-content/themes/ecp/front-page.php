@@ -39,9 +39,9 @@ get_header(); ?>
 <?php
 	// Fetch a random testimonial
 	$args = array(
-		'post_type' 		=> 'testimonial',
-		'order_by'			=> 'rand',
-		'post_per_page'	=> 1,
+		'post_type' 			=> 'testimonial',
+		'orderby'					=> 'rand',
+		'posts_per_page'	=> '1',
 	);
 	$query = new WP_Query( $args );
 
@@ -55,7 +55,7 @@ get_header(); ?>
 
 					<h3 class="testimonial-header">"<?php the_field('testimonial'); ?>"</h3>
 					<cite><?php the_field('person'); ?></cite>
-					
+
 				<?php endwhile; wp_reset_postdata(); ?>
 
 			</div>
