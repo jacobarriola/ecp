@@ -1,16 +1,7 @@
 // Typography
-// - - - - - - - - - - - - - - - - - - - - - - - - -
+$font-family-base: 'Roboto', sans-serif;
+$font-family-header: 'Raleway', sans-serif;
 
-p {
-	margin: 0;
-}
-
-h1 {
-	font-size: 2rem;
-	font-weight: 700;
-}
-
-h2 {
-	font-size: 1.25rem;
-	font-weight: 700;
-}
+$weight-light: 300;
+$weight-normal: 400;
+$weight-bold: 700;

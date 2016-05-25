@@ -1,3 +1,7 @@
+// Import our colors and typography so that we can use them in _settings.scss
+@import "base/colors";
+@import "base/typography";
+
 // Foundation override file
 @import "settings";
 

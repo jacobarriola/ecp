@@ -137,6 +137,11 @@ endif;
  */
 function ecp_scripts() {
 
+	// Enqueue Google Fonts	
+	wp_enqueue_style( 'googlefonts',
+		'https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto:300'
+	);
+
 	// Add Foundation JS to footer
 	wp_enqueue_script( 'foundation-js',
 		get_template_directory_uri() . '/assets/dist/js/foundation.js',
@@ -189,7 +194,7 @@ function ecp_nav_menu( $menu ){
 
 
 /*******************************************************************************
-* Make YouTube and Vimeo oembed elements responsive. Add Foundation's .flex-video 
+* Make YouTube and Vimeo oembed elements responsive. Add Foundation's .flex-video
 * class wrapper around any oembeds
 *******************************************************************************/
 
