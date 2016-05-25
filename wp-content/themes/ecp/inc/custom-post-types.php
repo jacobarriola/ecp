@@ -25,7 +25,7 @@ function cptui_register_my_cpts() {
 		"rewrite" => array( "slug" => "testimonial", "with_front" => true ),
 		"query_var" => true,
 		"menu_position" => 5,"menu_icon" => "dashicons-format-quote",
-		"supports" => array( "title", "page-attributes" ),
+		"supports" => array( "title" ),
 	);
 	register_post_type( "testimonial", $args );
 
