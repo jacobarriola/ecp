@@ -28,8 +28,7 @@ get_header(); ?>
 
     <?php while ( have_rows('team_member') ) : the_row(); ?>
 
-
-      <div class="member-block <?php echo $even_odd; ?>">
+      <div class="member-block">
 
         <?php
         $image = get_sub_field('team_member_thumbnail');
@@ -38,21 +37,24 @@ get_header(); ?>
           echo '<div class="member-thumb">' . wp_get_attachment_image( $image, $size ) . '</div>';
         }
         ?>
+
         <div class="member-content">
+
           <h2 class="member-header">
             <?php the_sub_field('team_member_name'); ?>
           </h2>
           <div class="member-bio">
             <?php the_sub_field('team_member_bio'); ?>
           </div>
+          
         </div>
-      </div>
+
+      </div><!-- .member-block -->
 
     <?php endwhile; ?>
 
   <?php endif; ?>
 
-</div>
-
+</div><!-- .row.column -->
 
 <?php get_footer(); ?>
