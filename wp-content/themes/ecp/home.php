@@ -70,7 +70,7 @@ if ( $main_query->have_posts() ) : ?>
           </div>
           <div class="post-archive-content">
             <?php the_title( '<h2 class="post-archive-header"><a href="<?php the_permalink(); ?>" title="Peramlink to <?php the_title(); ?>">', '</a></h2>' ); ?>
-            <?php the_date( '', '<span class="post-archive-date">', '-</span> ' ); the_excerpt(); ?>
+            <span class="post-archive-date"><?php echo get_the_date(); ?>-</span> <?php the_excerpt(); ?>
           </div>
         </div>
 
