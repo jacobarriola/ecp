@@ -79,9 +79,10 @@ function ecp_setup() {
 	) ) );
 
 	// Add images sizes
-	add_image_size( '600x475', 600, 475, true );
-	add_image_size( '250x250', 250, 250, true );
 	add_image_size( '800x375', 800, 375, true );
+	add_image_size( '600x475', 600, 475, true );
+	add_image_size( '500x350', 500, 350, true );
+	add_image_size( '250x250', 250, 250, true );
 
 }
 endif; // ecp_setup
@@ -248,4 +249,20 @@ add_filter( 'login_headertitle', 'ecp_change_login_logo_title' );
 
 function ecp_change_login_logo_title() {
 	return get_bloginfo( 'name' );
+}
+
+/*******************************************************************************
+* Excpert Customizations
+*******************************************************************************/
+
+// Custom excerpt lengths
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+function custom_excerpt_length( $length ) {
+	return 70;
+}
+
+// Customize the [...] from excerpts
+add_filter( 'excerpt_more', 'customize_excerpt_more' );
+function customize_excerpt_more( $more ) {
+	return ' <a href="'. get_the_permalink() . ' " class="excerpt-more-link">Learn More &gt;&gt;</a>';
 }
