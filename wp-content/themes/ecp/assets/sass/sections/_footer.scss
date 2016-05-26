@@ -6,6 +6,7 @@
 }
 
 .footer-header {
+	color: color('white');
 	text-transform: uppercase;
 
 	@include breakpoint(medium) {

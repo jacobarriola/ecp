@@ -119,7 +119,7 @@ $header-sizes: (
     'h6': 16,
   ),
 );
-$header-color: inherit;
+$header-color: color('grey', 'dark');
 $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-text-rendering: optimizeLegibility;
