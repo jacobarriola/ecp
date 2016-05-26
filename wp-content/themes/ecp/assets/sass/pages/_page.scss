@@ -24,3 +24,11 @@
 .entry-content p {
 	margin-bottom: 1.25rem;
 }
+
+.testimonial-archive-block {
+	margin-bottom: 5em;
+
+	&:last-of-type {
+		margin-bottom: 10em;
+	}
+}
