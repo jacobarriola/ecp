@@ -102,24 +102,3 @@
     width: 400px;
   }
 }
-
-
-////////////////////////////////////////////////////////////////////////////////
-// Testimonial
-////////////////////////////////////////////////////////////////////////////////
-
-.home-testimonial {
-  background-color: color('grey', 'light');
-  padding-top: 5em;
-  padding-bottom: 5em;
-
-  cite {
-    &::before {
-      content: '';
-    }
-  }
-}
-
-.testimonial-header {
-  line-height: 1.2;
-}

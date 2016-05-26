@@ -34,34 +34,7 @@ get_header(); ?>
 
 </div>
 
-<?php
-	// Fetch a random testimonial
-	$args = array(
-		'post_type' 			=> 'testimonial',
-		'orderby'					=> 'rand',
-		'posts_per_page'	=> '1',
-	);
-	$query = new WP_Query( $args );
-
- if( $query->have_posts() ) : ?>
-
-	<div class="home-testimonial">
-		<div class="row">
-			<div class="large-8 columns home-testimonial-content">
-
-				<?php	while ( $query->have_posts() ) : $query->the_post(); ?>
-
-					<h3 class="testimonial-header">"<?php the_field('testimonial'); ?>"</h3>
-					<cite><?php the_field('person'); ?></cite>
-
-				<?php endwhile; wp_reset_postdata(); ?>
-
-			</div>
-		</div>
-	</div>
-
-<?php endif; ?>
-
+<?php get_template_part( 'components/testimonial' ); ?>
 
 <div class="what-we-do">
 
@@ -82,4 +55,4 @@ get_header(); ?>
 	</div>
 </div>
 
-<?php get_footer(); ?>
+<?php get_footer('home'); ?>

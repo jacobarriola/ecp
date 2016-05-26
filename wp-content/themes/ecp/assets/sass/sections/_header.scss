@@ -66,3 +66,16 @@
 		color: color('grey');
 	}
 }
+
+.site-hero {
+  background: color('grey');
+  height: 100px;
+	margin-bottom: 2em;
+
+  @include breakpoint(medium) {
+    background: color('grey') url('../../img/texture-overlay.png') no-repeat;
+    background-size: cover;
+		height: 200px;
+		margin-bottom: 3em;
+  }
+}

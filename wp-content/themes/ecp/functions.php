@@ -80,8 +80,9 @@ function ecp_setup() {
 
 	// Add images sizes
 	add_image_size( '600x475', 600, 475, true );
+	add_image_size( '250x250', 250, 250, true );
 	add_image_size( '800x375', 800, 375, true );
-	
+
 }
 endif; // ecp_setup
 add_action( 'after_setup_theme', 'ecp_setup' );

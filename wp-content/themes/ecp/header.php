@@ -111,4 +111,10 @@
 
   </header><!-- .masthead -->
 
+  <?php if ( ! is_front_page() ) : ?>
+
+    <div class="site-hero"></div>
+
+  <?php endif; ?>
+
 	<div class="site-content">

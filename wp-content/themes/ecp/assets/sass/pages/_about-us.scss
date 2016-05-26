@@ -1,0 +1,35 @@
+.about-us-content {
+  margin-bottom: 8em;
+}
+
+.member-block {
+  display: flex;
+  margin-bottom: 5em;
+
+  &:nth-child(even) {
+
+    .member-thumb {
+      order: 2;
+      margin-left: 1em;
+      margin-right: 0;
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 8em;
+  }
+}
+
+.member-thumb {
+  display: none;
+
+  @include breakpoint(medium) {
+    display: inline-block;
+    flex: 1 0 auto;
+    margin-right: 1em;
+  }
+}
+
+.member-header {
+  font-weight: $weight-light;
+}

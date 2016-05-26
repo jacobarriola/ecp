@@ -25,3 +25,13 @@
 		color: color('white');
 	}
 }
+
+.footer-legal {
+	font-family: $header-font-family;
+	font-size: .75em;
+	margin-bottom: 0;
+
+	@include breakpoint(small only) {
+		margin-top: 2em;
+	}
+}

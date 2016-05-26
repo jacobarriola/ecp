@@ -14,58 +14,14 @@
 
 <footer class="site-footer" role="contentinfo">
 
-	<div class="row">
+	<div class="row column">
 
-		<div class="medium-centered medium-9 columns">
-
-			<div class="row">
-				<div class="medium-5 columns">
-					<h2 class="footer-header">Contact Us</h2>
-					<p>If you have questions or comments, we'd love to hear from you.</p>
-					<ul class="footer-social">
-						<li>
-							<a href="">
-								<svg class="icon">
-									<use xlink:href="#linkedin2"></use>
-								</svg>
-							</a>
-						</li>
-						<li>
-			        <a href="">
-			          <svg class="icon">
-			            <use xlink:href="#facebook"></use>
-			          </svg>
-			        </a>
-			      </li>
-			      <li>
-			        <a href="">
-			          <svg class="icon">
-			            <use xlink:href="#instagram"></use>
-			          </svg>
-			        </a>
-			      </li>
-			      <li>
-			        <a href="">
-			          <svg class="icon">
-			            <use xlink:href="#twitter"></use>
-			          </svg>
-			        </a>
-			      </li>
-					</ul>
-				</div>
-
-				<div class="medium-7 columns">
-
-				</div>
-			</div>
-
-
-		</div>
+		<?php get_template_part( 'components/testimonial' ); ?>
 
 	</div><!-- .column.row -->
 
+	<p class="footer-legal text-center">All Rights Reserverd. &copy; <?php echo Date('Y'); ?></p>
 </footer><!-- #colophon -->
-
 
 
 <?php wp_footer(); ?>

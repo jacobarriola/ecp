@@ -1,0 +1,28 @@
+.home-testimonial {
+  background-color: color('grey', 'light');
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.site-testimonial {
+
+  @include breakpoint(medium) {
+    padding-top: 7em;
+    padding-bottom: 7em;
+  }
+
+  cite {
+    color: color('white');
+  }
+}
+
+.testimonial-content {
+  cite {
+    &::before {
+      content: '';
+    }
+  }
+}
+.testimonial-header {
+  line-height: 1.2;
+}
