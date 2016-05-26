@@ -6,28 +6,32 @@
  *
  * @package ecp
  */
+
+$thumb_placement = get_field('place_featured_image_on_right');
+
+if ( $thumb_placement ) {
+	$thumb_class = 'right-side';
+} else {
+	$thumb_class = 'default';
+}
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<article id="post-<?php the_ID(); ?>" <?php post_class('single-post-container'); ?>>
+
+	<div class="single-thumbnail <?php echo $thumb_class; ?>">
+		<?php the_post_thumbnail( '500x350' ); ?>
+	</div>
+
+	<div class="entry-content">
+
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="entry-meta">
-			<?php ecp_posted_on(); ?>
+			<?php the_date(); ?> - <?php the_author(); ?>
 		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
 
-	<div class="entry-content">
 		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ecp' ),
-				'after'  => '</div>',
-			) );
-		?>
+
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php ecp_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
