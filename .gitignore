@@ -98,3 +98,4 @@ wp-content/mysql.sql
 *.avi
 wp-content/debug.log
 .htaccess
+wp-content/db.php
