@@ -81,23 +81,23 @@
         </a>
       </li>
       <li>
-        <a href="">
+        <a href="https://twitter.com/ECPcoaching" rel="nofollow">
           <svg class="icon">
-            <use xlink:href="#facebook"></use>
+            <use xlink:href="#twitter"></use>
           </svg>
         </a>
       </li>
       <li>
-        <a href="">
+        <a href="https://www.instagram.com/essentialcoaching/" rel="nofollow">
           <svg class="icon">
             <use xlink:href="#instagram"></use>
           </svg>
         </a>
       </li>
       <li>
-        <a href="">
+        <a href="https://www.facebook.com/Essential-Coaching-Partners-912724458845695/" rel="nofollow">
           <svg class="icon">
-            <use xlink:href="#twitter"></use>
+            <use xlink:href="#facebook"></use>
           </svg>
         </a>
       </li>
