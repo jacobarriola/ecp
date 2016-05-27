@@ -125,6 +125,16 @@ add_action( 'widgets_init', 'ecp_widgets_init' );
 if ( !function_exists( 'ecp_styles' ) ) :
 
 	function ecp_styles() {
+
+		// Enqueue Flickity CSS (carousels)
+		if ( is_front_page() ) {
+			wp_enqueue_style(
+				'flickity_styles',
+				get_stylesheet_directory_uri() . '/assets/dist/css/flickity.min.css',
+				'', '1.2.1'
+			);
+		}
+
 		// Enqueue our stylesheet
 		$handle = 'ecp_styles';
 		$src =  get_template_directory_uri() . '/assets/dist/css/app.css';
@@ -150,10 +160,19 @@ function ecp_scripts() {
 	);
 
 	// Add Foundation JS to footer
-	wp_enqueue_script( 'foundation-js',
-		get_template_directory_uri() . '/assets/dist/js/foundation.js',
-		array( 'jquery' ), '6.1.1', true
-	);
+	// wp_enqueue_script( 'foundation-js',
+	// 	get_template_directory_uri() . '/assets/dist/js/foundation.js',
+	// 	array( 'jquery' ), '6.1.1', true
+	// );
+
+	// Enqueue Flickity JS (carousels)
+	if ( is_front_page() ) {
+		wp_enqueue_script (
+			'flickity_js',
+			get_template_directory_uri() . '/assets/dist/js/flickity.pkgd.min.js',
+			'', '1.2.1', true
+		);
+	}
 
 	// Add our concatenated JS file after Foundation
 	$handle = 'ecp_appjs';

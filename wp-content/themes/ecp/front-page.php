@@ -29,7 +29,25 @@ get_header(); ?>
 	</div>
 
 	<div class="medium-7 columns">
-		<img src="http://fillmurray.com/800/375" alt="">
+
+	<?php $images = get_field('carousel_gallery'); ?>
+
+	<?php if ( $images ) : ?>
+
+	  <div class="js-carousel">
+
+	    <?php foreach ( $images as $image ) : ?>
+
+	      <div class="carousel-cell">
+	        <img data-flickity-lazyload="<?php echo $image['sizes']['600x475']; ?>" alt="<?php echo $image['alt']; ?>">
+	      </div>
+
+	    <?php endforeach; ?>
+
+	  </div>
+
+	<?php endif; ?>
+
 	</div>
 
 </div>
