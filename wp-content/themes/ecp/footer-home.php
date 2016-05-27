@@ -23,34 +23,7 @@
 					<h2 class="footer-header">Contact Us</h2>
 					<p>If you have questions or comments, we'd love to hear from you.</p>
 					<ul class="footer-social">
-						<li>
-							<a href="">
-								<svg class="icon">
-									<use xlink:href="#linkedin2"></use>
-								</svg>
-							</a>
-						</li>
-						<li>
-			        <a href="">
-			          <svg class="icon">
-			            <use xlink:href="#facebook"></use>
-			          </svg>
-			        </a>
-			      </li>
-			      <li>
-			        <a href="">
-			          <svg class="icon">
-			            <use xlink:href="#instagram"></use>
-			          </svg>
-			        </a>
-			      </li>
-			      <li>
-			        <a href="">
-			          <svg class="icon">
-			            <use xlink:href="#twitter"></use>
-			          </svg>
-			        </a>
-			      </li>
+						<?php get_template_part( 'components/social' ); ?>	
 					</ul>
 				</div>
 
