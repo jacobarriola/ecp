@@ -61,7 +61,27 @@ get_header(); ?>
 		<div class="what-we-do-content">
 
 			<div class="what-we-do-img">
-				<img src="http://fillmurray.com/600/475" alt="">
+				<?php
+				$image = get_field('what_we_do_image');
+
+				if( !empty($image) ):
+
+					// vars
+					$url = $image['url'];
+					$alt = $image['alt'];
+
+					// thumbnail
+					$size = '600x475';
+					$thumb = $image['sizes'][ $size ];
+					$width = $image['sizes'][ $size . '-width' ];
+					$height = $image['sizes'][ $size . '-height' ];
+
+					?>
+
+					<img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" />
+
+				<?php endif; ?>
+
 			</div>
 
 			<div class="what-we-do-copy">
