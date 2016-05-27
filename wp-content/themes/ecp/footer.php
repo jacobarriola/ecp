@@ -16,7 +16,7 @@
 
 	<div class="row column">
 
-		<?php get_template_part( 'components/testimonial' ); ?>
+		<?php get_template_part( 'components/quote' ); ?>
 
 	</div><!-- .column.row -->
 

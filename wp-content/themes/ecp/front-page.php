@@ -34,7 +34,7 @@ get_header(); ?>
 
 </div>
 
-<?php get_template_part( 'components/testimonial' ); ?>
+<?php get_template_part( 'components/quote' ); ?>
 
 <div class="what-we-do">
 

@@ -52,9 +52,9 @@ acf_add_local_field_group(array (
 	'location' => array (
 		array (
 			array (
-				'param' => 'page',
+				'param' => 'page_type',
 				'operator' => '==',
-				'value' => '8',
+				'value' => 'front_page',
 			),
 		),
 	),
@@ -86,11 +86,11 @@ acf_add_local_field_group(array (
 
 acf_add_local_field_group(array (
 	'key' => 'group_574540d9a7ec6',
-	'title' => 'Testimonial Fields',
+	'title' => 'Quote Fields',
 	'fields' => array (
 		array (
 			'key' => 'field_574540e3d758a',
-			'label' => 'Testimonial',
+			'label' => 'Quote',
 			'name' => 'testimonial',
 			'type' => 'textarea',
 			'instructions' => '',
@@ -137,6 +137,13 @@ acf_add_local_field_group(array (
 				'param' => 'post_type',
 				'operator' => '==',
 				'value' => 'testimonial',
+			),
+		),
+		array (
+			array (
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'quote',
 			),
 		),
 	),
@@ -282,9 +289,9 @@ acf_add_local_field_group(array (
 	'location' => array (
 		array (
 			array (
-				'param' => 'page',
+				'param' => 'page_type',
 				'operator' => '==',
-				'value' => '8',
+				'value' => 'front_page',
 			),
 		),
 	),
@@ -388,9 +395,9 @@ acf_add_local_field_group(array (
 	'location' => array (
 		array (
 			array (
-				'param' => 'page',
+				'param' => 'page_type',
 				'operator' => '==',
-				'value' => '8',
+				'value' => 'front_page',
 			),
 		),
 	),

@@ -1,10 +1,10 @@
-.home-testimonial {
+.home-quote {
   background-color: color('grey', 'light');
   padding-top: 5em;
   padding-bottom: 5em;
 }
 
-.site-testimonial {
+.site-quote {
 
   @include breakpoint(medium) {
     padding-top: 7em;
@@ -15,12 +15,12 @@
     color: color('white');
   }
 
-  .testimonial-header {
+  .quote-header {
     color: color('white');
   }
 }
 
-.testimonial-content {
+.quote-content {
   cite {
     &::before {
       content: '';
@@ -28,6 +28,6 @@
   }
 }
 
-.testimonial-header {
+.quote-header {
   line-height: 1.2;
 }

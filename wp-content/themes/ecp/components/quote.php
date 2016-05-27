@@ -10,7 +10,7 @@
 
 	// Fetch a random testimonial
 	$args = array(
-		'post_type' 			=> 'testimonial',
+		'post_type' 			=> 'quote',
 		'orderby'					=> 'rand',
 		'posts_per_page'	=> '1',
 	);
@@ -18,13 +18,13 @@
 
  if ( $query->have_posts() ) : ?>
 
-	<div class="<?php echo $location; ?>-testimonial">
+	<div class="<?php echo $location; ?>-quote">
 		<div class="row">
-			<div class="<?php echo $column_class; ?> columns testimonial-content">
+			<div class="<?php echo $column_class; ?> columns quote-content">
 
 				<?php	while ( $query->have_posts() ) : $query->the_post(); ?>
 
-					<h3 class="testimonial-header">"<?php the_field('testimonial'); ?>"</h3>
+					<h3 class="quote-header">"<?php the_field('testimonial'); ?>"</h3>
 					<cite><?php the_field('person'); ?></cite>
 
 				<?php endwhile; wp_reset_postdata(); ?>
