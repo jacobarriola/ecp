@@ -73,7 +73,7 @@
 		</nav><!-- #site-navigation -->
 
     <ul class="header-social">
-      <?php get_template_part( 'components/social' ); ?>	
+      <?php get_template_part( 'components/social' ); ?>
     </ul>
 
     <div class="hamburger-wrapper">
@@ -84,7 +84,12 @@
 
   </header><!-- .masthead -->
 
-  <?php if ( ! is_front_page() ) : ?>
+  <?php if ( is_page_template( 'page-templates/template-reboot-camp.php' ) ) : ?>
+
+    <h1 class="screen-reader-text"><?php the_title(); ?></h1>
+    <div class="reboot-camp-hero" style="background-image: url('<?php the_field('camp_hero_image'); ?>')"></div>
+
+  <?php elseif ( ! is_front_page() ) : ?>
 
     <div class="site-hero"></div>
 
