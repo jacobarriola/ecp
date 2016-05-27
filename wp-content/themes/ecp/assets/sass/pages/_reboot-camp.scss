@@ -22,7 +22,7 @@
 
 .camp-header {
   line-height: 1;
-  margin-bottom: 0;
+  margin-bottom: .2em;
 
   @include breakpoint(medium) {
     font-size: 2em;

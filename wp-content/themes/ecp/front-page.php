@@ -55,4 +55,4 @@ get_header(); ?>
 	</div>
 </div>
 
-<?php get_footer('home'); ?>
+<?php get_footer('alt'); ?>
