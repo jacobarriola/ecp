@@ -12,6 +12,7 @@ if($.isFunction($.fn.flickity)) {
     // options
     cellAlign: 'left',
     lazyLoad: true,
+    lazyLoad: 1,
     setGallerySize: false,
     pageDots: false,
     wrapAround: true // infinite scrolling
