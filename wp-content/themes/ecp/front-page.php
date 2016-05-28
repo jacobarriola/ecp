@@ -20,7 +20,7 @@ get_header(); ?>
 
 <div class="row home-what">
 
-	<div class="medium-4 columns">
+	<div class="medium-5 columns">
 		<h3><?php the_field('home_reboot_headline'); ?></h3>
 		<div class="what-copy"><?php the_field('home_reboot_copy'); ?></div>
 		<a href="<?php the_permalink( get_field('home_reboot_button_link') ); ?>" class="button expanded">
@@ -28,7 +28,7 @@ get_header(); ?>
 		</a>
 	</div>
 
-	<div class="medium-7 columns">
+	<div class="medium-6 columns">
 
 	<?php $images = get_field('carousel_gallery'); ?>
 

@@ -4,10 +4,9 @@
   width: rem-calc(23);
   height: rem-calc(50);
   padding: 0;
-  // top: 40%;
-
 
   @include breakpoint(full-carousel) {
+    top: 50%;
     width: rem-calc(65);
     height: rem-calc(65);
   }
@@ -17,21 +16,24 @@
   }
 
   &.next {
-    left: 0;
-    // right: 0;
+    right: 0;
+
+    @include breakpoint(full-carousel) {
+      left: 0;
+    }
   }
 
   &.previous {
-    left: rem-calc(-70);
+    left: 0;
+
+    @include breakpoint(full-carousel) {
+      left: rem-calc(-70);
+    }
   }
 
   .arrow {
     fill: color('white');
     transition: .3s;
-
-    @include breakpoint(full-carousel) {
-      // fill: #bbb;
-    }
 
     &:hover {
       fill: color('grey', 'light');
@@ -51,7 +53,11 @@
 }
 
 .flickity-page-dots {
-  bottom: -2em;
+  // bottom: -2em;
+
+  @include breakpoint(full-carousel) {
+   display: none;
+ }
 
   &::before,
   &::after {
@@ -69,13 +75,13 @@
 
 
   .dot {
-    background: color('grey', 'light');
+    background: color('grey');
     border-radius: 50%;
     margin: 0 .75em;
     opacity: 1;
 
     &.is-selected {
-      background: color('grey', 'dark');
+      background: color('green');
     }
   }
 }

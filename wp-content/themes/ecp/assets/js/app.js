@@ -14,20 +14,7 @@ if($.isFunction($.fn.flickity)) {
     lazyLoad: true,
     setGallerySize: false,
     pageDots: false,
-    wrapAround: true, // infinite scrolling
-    // prevNextButtons: false // using custon method below
-  });
-
-  $carousel.flickity( 'next');
-  $('.button--next-wrapped').on( 'click', function(e) {
-    e.preventDefault();
-    $carousel.flickity( 'next', true );
-  });
-
-  $carousel.flickity( 'previous');
-  $('.button--previous-wrapped').on( 'click', function(e) {
-    e.preventDefault();
-    $carousel.flickity( 'previous', true );
+    wrapAround: true // infinite scrolling
   });
 }
 
