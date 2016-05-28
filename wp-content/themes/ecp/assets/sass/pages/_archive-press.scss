@@ -1,0 +1,29 @@
+.archive-press-block {
+  margin-bottom: 5em;
+  font-size: .875em;
+
+  &:first-of-type {
+    margin-top: 8em;
+  }
+}
+
+.press-thumbnail {
+  margin-right: 1em;
+
+  @include breakpoint(medium) {
+    margin-right: 3em;
+  }
+}
+
+.press-date {
+  display: inline-block;
+  margin-bottom: .25em;
+  font-style: italic;
+}
+
+.press-title {
+  color: color('green');
+  font-family: $font-family-base;
+  font-size: 1em;
+  margin-bottom: .25em;
+}

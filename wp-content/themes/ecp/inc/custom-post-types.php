@@ -55,5 +55,32 @@ function cptui_register_my_cpts() {
 	);
 	register_post_type( "quote", $args );
 
+	$labels = array(
+		"name" => __( 'Press', 'ecp' ),
+		"singular_name" => __( 'Press', 'ecp' ),
+		);
+
+	$args = array(
+		"label" => __( 'Press', 'ecp' ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => false,
+		"show_ui" => true,
+		"show_in_rest" => false,
+		"rest_base" => "",
+		"has_archive" => true,
+		"show_in_menu" => true,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => array( "slug" => "press", "with_front" => true ),
+		"query_var" => true,
+		"menu_position" => 7,"menu_icon" => "dashicons-edit",
+		"supports" => array( "title", "editor", "thumbnail", "excerpt" ),
+	);
+	register_post_type( "press", $args );
+
 // End of cptui_register_my_cpts()
 }

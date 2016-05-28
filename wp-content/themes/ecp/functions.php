@@ -83,6 +83,7 @@ function ecp_setup() {
 	add_image_size( '600x475', 600, 475, true );
 	add_image_size( '500x350', 500, 350, true );
 	add_image_size( '250x250', 250, 250, true );
+	add_image_size( '100x100', 100, 100, true );
 
 }
 endif; // ecp_setup
@@ -277,11 +278,20 @@ function ecp_change_login_logo_title() {
 // Custom excerpt lengths
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 function custom_excerpt_length( $length ) {
-	return 70;
+	if ( is_post_type_archive( 'press' ) ) {
+		return 50;
+	} else {
+		return 70;
+	}
 }
+
 
 // Customize the [...] from excerpts
 add_filter( 'excerpt_more', 'customize_excerpt_more' );
 function customize_excerpt_more( $more ) {
-	return ' <a href="'. get_the_permalink() . ' " class="excerpt-more-link">Learn More &gt;&gt;</a>';
+	if ( is_post_type_archive( 'press' ) ) {
+		return '...<a href="'. get_the_permalink() . ' " class="excerpt-more-link">Read Full Article</a>';
+	} else {
+		return ' <a href="'. get_the_permalink() . ' " class="excerpt-more-link">Learn More &gt;&gt;</a>';
+	}
 }
