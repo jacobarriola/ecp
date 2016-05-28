@@ -3,6 +3,18 @@
 	color: color('white');
 	padding-top: 3em;
 	padding-bottom: 3em;
+
+	.gform_wrapper {
+		input[type='text'],
+		textarea {
+			height: 50px;
+			padding: 1em .5em;
+		}
+
+		label.gfield_label {
+			display: none;
+		}
+	}
 }
 
 .footer-header {
