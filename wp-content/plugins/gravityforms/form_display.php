@@ -2088,7 +2088,6 @@ class GFFormDisplay {
 
 		//adding currency config if there are any product fields in the form
 		if ( self::has_price_field( $form ) ) {
-			self::add_init_script( $form['id'], 'number_formats', self::ON_PAGE_RENDER, self::get_number_formats_script( $form ) );
 			self::add_init_script( $form['id'], 'pricing', self::ON_PAGE_RENDER, self::get_pricing_init_script( $form ) );
 		}
 

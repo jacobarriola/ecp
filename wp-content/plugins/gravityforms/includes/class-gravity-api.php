@@ -57,23 +57,35 @@ class Gravity_Api {
 		GFCommon::log_debug( __METHOD__ . '() - requesting new site key' );
 		$result = $this->request( 'sites', $body );
 
-		$response = $this->prepare_response_body( $result );
-
-		if ( is_wp_error( $response ) ) {
-			GFCommon::log_debug( 'Gravity_Api::add_site() - error:' . print_r( $response, true ) );
-			return $response;
-		} else {
-
-			$site_details = $response_body->data;
-			$site_key     = $site_details->key;
-			$site_secret  = $site_details->secret;
-
-			update_option( 'gf_site_key', $site_key );
-			update_option( 'gf_site_secret', $site_secret );
-
-			GFCommon::log_debug( 'Gravity_Api::add_site() - site created' );
-
+		if ( is_wp_error( $result ) ) {
+			return $result;
 		}
+
+		if ( $result['response']['code'] != 200 ) {
+			return false;
+		}
+
+		$response_body = json_decode( $result['body'] );
+		if ( empty( $response_body ) ) {
+			GFCommon::log_debug( 'Gravity_Api::stash_site_key() - error - unexpected response:' . print_r( $result, true ) );
+			return false;
+		} else {
+			if ( $response_body->success ) {
+				$site_details = $response_body->data;
+				$site_key     = $site_details->key;
+				$site_secret  = $site_details->secret;
+
+				update_option( 'gf_site_key', $site_key );
+				update_option( 'gf_site_secret', $site_secret );
+
+				GFCommon::log_debug( 'Gravity_Api::stash_site_key() - stashed' );
+			} else {
+				GFCommon::log_debug( 'Gravity_Api::stash_site_key() - error: ' . $response_body->message );
+
+				return new WP_Error( $response_body->code, $response_body->message );
+			}
+		}
+
 
 		return true;
 	}
@@ -96,11 +108,22 @@ class Gravity_Api {
 			'license_key_md5' => $new_license_key_md5,
 		);
 
-		$response = $this->request( 'sites/' . $site_key, $body, 'PUT' );
+		$result = $this->request( 'sites/' . $site_key, $body, 'PUT' );
 
-		$result = $this->prepare_response_body( $response );
+		if ( is_wp_error( $result ) || $result['response']['code'] != 200 ) {
+			return false;
+		}
 
-		return $result;
+		$response_body = json_decode( $result['body'] );
+
+		if ( ! $response_body ){
+			return new WP_Error( $response_body->code, $response_body->message );
+		}
+		else if ( ! $response_body->success ) {
+			return new WP_Error( $response_body->code, $response_body->message );
+		}
+
+		return $response_body;
 	}
 
 	/***
