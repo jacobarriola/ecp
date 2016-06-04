@@ -89,7 +89,8 @@ get_header(); ?>
 
 <?php get_template_part( 'components/quote' ); ?>
 
-<div class="what-we-do">
+<?php $bg_img = get_field('what_we_do_image_background'); ?>
+<div class="what-we-do" style="background: url(<?php echo $bg_img; ?>) center center / cover no-repeat #f5f5f4;">
 
 	<div class="row column">
 

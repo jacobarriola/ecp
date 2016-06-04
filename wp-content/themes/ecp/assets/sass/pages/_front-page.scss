@@ -116,13 +116,6 @@
 // What we do
 ////////////////////////////////////////////////////////////////////////////////
 
-.what-we-do {
-  @include breakpoint(medium) {
-    background: color('grey') url('../../img/what-we-do-bg.jpg') no-repeat;
-    background-size: cover;
-  }
-}
-
 .what-we-do-content {
   display: flex;
 }
