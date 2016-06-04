@@ -29,7 +29,7 @@
 				</div>
 
 				<div class="medium-7 columns">
-						<?php /* gravity_form(1, false, false, false, '', true, 12); */ ?>
+						<?php gravity_form(1, false, false, false, '', true, 12); ?>
 				</div>
 			</div>
 
