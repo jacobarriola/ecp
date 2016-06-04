@@ -21,7 +21,7 @@ get_header(); ?>
 <div class="row home-what">
 
 	<div class="medium-5 columns">
-		<h3><?php the_field('home_reboot_headline'); ?></h3>
+		<h2><?php the_field('home_reboot_headline'); ?></h2>
 		<div class="what-copy"><?php the_field('home_reboot_copy'); ?></div>
 		<a href="<?php the_permalink( get_field('home_reboot_button_link') ); ?>" class="button expanded">
 			<?php the_field('home_reboot_button_copy'); ?>
@@ -50,6 +50,41 @@ get_header(); ?>
 
 	</div>
 
+</div>
+
+<div class="home-cta">
+
+	<div class="row home-cta-inner">
+
+		<div class="medium-7 columns">
+			<div class="home-cta-content-wrap">
+				<div class="home-cta-content">
+					<h2><?php the_field('cta_content_title'); ?></h2>
+					<?php the_field('cta_content_copy'); ?>
+				</div>
+				<div class="home-cta-arrows">
+					<svg class="icon icon-arrow">
+						<use xlink:href="#icon-arrow"></use>
+					</svg>
+					<svg class="icon icon-arrow">
+						<use xlink:href="#icon-arrow"></use>
+					</svg>
+					<svg class="icon icon-arrow">
+						<use xlink:href="#icon-arrow"></use>
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<div class="medium-5 columns">
+			<div class="home-cta-box">
+				<h3><?php the_field('cta_box_title'); ?></h3>
+				<?php the_field('cta_box_copy'); ?>
+ 				<a href="<?php the_field('cta_button_link'); ?>" class="button expanded"><?php the_field('cta_button_copy'); ?></a>
+			</div>
+		</div>
+
+	</div>
 </div>
 
 <?php get_template_part( 'components/quote' ); ?>

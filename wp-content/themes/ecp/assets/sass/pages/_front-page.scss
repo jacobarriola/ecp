@@ -21,9 +21,9 @@
 
 .hero-header {
   color: color('white');
-  
+
   @include breakpoint(medium) {
-    font-size: 3em;
+    font-size: 4em;
     margin-bottom: 0;
   }
 }
@@ -33,7 +33,7 @@
   font-weight: $weight-light;
 
   @include breakpoint(medium) {
-    font-size: 2em;
+    font-size: 2.5em;
   }
 }
 
@@ -58,6 +58,56 @@
   @include breakpoint(medium) {
     margin-bottom: 4em;
 
+  }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// CTA
+////////////////////////////////////////////////////////////////////////////////
+
+.home-cta {
+  background-color: color('grey', 'light');
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.home-cta-inner {
+  @include breakpoint(medium) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.home-cta-content-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.home-cta-box {
+  background: color('white');
+  font-size: .875em;
+  padding: 3em;
+
+  .button {
+    margin-top: 2em;
+    margin-bottom: 0;
+  }
+}
+
+.home-cta-content {
+  flex: 3 1 auto;
+}
+
+.home-cta-arrows {
+  display: none;
+
+  @include breakpoint(large) {
+    display: inline-block;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    margin-left: 1.25em;
+    flex: 1 0 auto;
   }
 }
 
