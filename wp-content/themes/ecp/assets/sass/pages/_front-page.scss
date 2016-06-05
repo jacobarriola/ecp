@@ -116,6 +116,12 @@
 // What we do
 ////////////////////////////////////////////////////////////////////////////////
 
+.what-we-do {
+  @include smaller-than(medium) {
+    background: color('white') !important;
+  }
+}
+
 .what-we-do-content {
   display: flex;
 }
