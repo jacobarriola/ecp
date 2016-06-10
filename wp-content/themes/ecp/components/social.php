@@ -1,5 +1,5 @@
 <li>
-  <a href="">
+  <a href="https://www.linkedin.com/company/essential-coaching-partners" rel="nofollow">
     <svg class="icon">
       <use xlink:href="#linkedin2"></use>
     </svg>
