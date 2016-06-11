@@ -9,7 +9,7 @@ get_header(); ?>
 	<?php while ( have_posts() ) : the_post(); ?>
 
     <div class="row">
-      <div class="medium-7 columns">
+      <div class="medium-7 large-6 columns">
         <?php the_content(); ?>
       </div>
       <div class="medium-5 columns">
