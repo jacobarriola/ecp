@@ -22,7 +22,7 @@
 
 				<div class="medium-4 columns">
 					<h2 class="footer-header">Contact Us</h2>
-					<p>If you have questions or comments, we'd love to hear from you.</p>
+					<p><span class="footer-contact">If you have questions or comments,</span> we'd love to hear from you.</p>
 					<ul class="footer-social">
 						<?php get_template_part( 'components/social' ); ?>
 					</ul>
