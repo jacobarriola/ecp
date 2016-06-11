@@ -1,8 +1,11 @@
 .single-thumbnail {
+  margin-bottom: 1em;
+
   @include breakpoint(medium) {
     float: left;
     margin-right: 2em;
-    margin-bottom: 2em;
+    margin-top: 1em;
+    margin-bottom: 0;
 
     &.right-side {
       float: right;
@@ -16,6 +19,6 @@
   margin-bottom: 5em;
 
   @include breakpoint(medium) {
-    margin-bottom: 15em;    
+    margin-bottom: 15em;
   }
 }
