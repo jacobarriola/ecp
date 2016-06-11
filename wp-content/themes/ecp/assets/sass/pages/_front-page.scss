@@ -124,6 +124,7 @@
 
 .what-we-do-content {
   display: flex;
+  align-items: center;
 }
 
 .what-we-do-img {
@@ -150,6 +151,6 @@
   @include breakpoint(medium) {
     padding: 4em 3em;
     margin-left: auto;
-    width: 400px;
+    width: 440px;
   }
 }
