@@ -2,10 +2,8 @@
 
   if ( is_front_page() ) {
     $location = 'home';
-    $column_class = 'large-8';
   } else {
     $location = 'site';
-    $column_class = '';
   }
 
 	// Fetch a random testimonial
@@ -20,7 +18,7 @@
 
 	<div class="<?php echo $location; ?>-quote">
 		<div class="row">
-			<div class="<?php echo $column_class; ?> columns quote-content">
+			<div class="column quote-content">
 
 				<?php	while ( $query->have_posts() ) : $query->the_post(); ?>
 
