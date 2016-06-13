@@ -17,28 +17,28 @@ get_header(); ?>
         <div class="camp-sidebar">
 
           <div class="camp-sidebar-block">
-            <h2 class="camp-header">What</h2>
+            <h2 class="camp-header"><?php the_field('first_section_header'); ?></h2>
             <div class="camp-sidebar-content">
               <?php the_field('camp_what'); ?>
             </div>
           </div>
 
           <div class="camp-sidebar-block">
-            <h2 class="camp-header">When</h2>
+						<h2 class="camp-header"><?php the_field('second_section_header'); ?></h2>
             <div class="camp-sidebar-content">
               <?php the_field('camp_when'); ?>
             </div>
           </div>
 
           <div class="camp-sidebar-block">
-            <h2 class="camp-header">Where</h2>
+						<h2 class="camp-header"><?php the_field('third_section_header'); ?></h2>
             <div class="camp-sidebar-content">
               <?php the_field('camp_where'); ?>
             </div>
           </div>
 
           <div class="camp-sidebar-block">
-            <h2 class="camp-header">How</h2>
+						<h2 class="camp-header"><?php the_field('fourth_section_header'); ?></h2>
             <div class="camp-sidebar-content">
               <?php the_field('camp_how'); ?>
             </div>
