@@ -1,17 +1,27 @@
 .about-us-content {
-  margin-bottom: 8em;
+  margin-bottom: 4em;
+  @include breakpoint(large) {
+    margin-bottom: 8em;
+  }
 }
 
 .member-block {
   display: flex;
+  flex-direction: column;
   margin-bottom: 5em;
+
+  @include breakpoint(medium) {
+    flex-direction: row;
+  }
 
   &:nth-child(even) {
 
-    .member-thumb {
-      order: 2;
-      margin-left: 1em;
-      margin-right: 0;
+    @include breakpoint(medium) {
+      .member-thumb {
+        order: 2;
+        margin-left: 1em;
+        margin-right: 0;
+      }
     }
   }
 
@@ -21,12 +31,12 @@
 }
 
 .member-thumb {
-  display: none;
-
+  margin-bottom: 1em;
   @include breakpoint(medium) {
     display: inline-block;
     flex: 1 0 auto;
     margin-right: 1em;
+    margin-bottom: 0;
   }
 }
 
