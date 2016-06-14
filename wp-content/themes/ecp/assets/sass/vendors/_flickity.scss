@@ -42,12 +42,18 @@
 }
 
 .js-carousel {
-  height: 375px;
+
+  height: 200px;
   width: 100%;
+
+  @include breakpoint(full-carousel) {
+    height: 375px;
+  }
 
 }
 
 .carousel-cell {
   padding-right: 5px;
   width: 80%;
+  height: 100%;
 }

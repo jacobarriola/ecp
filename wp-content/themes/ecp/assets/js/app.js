@@ -11,6 +11,7 @@ if($.isFunction($.fn.flickity)) {
   $carousel.flickity({
     // options
     cellAlign: 'left',
+    imagesLoaded: true,
     lazyLoad: true,
     lazyLoad: 1,
     setGallerySize: false,

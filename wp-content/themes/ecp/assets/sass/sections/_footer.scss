@@ -2,7 +2,10 @@
 	background: color('grey');
 	color: color('white');
 	padding-top: 3em;
-	padding-bottom: 3em;
+
+	@include breakpoint(medium) {
+		padding-bottom: 3em;
+	}
 
 	.gform_wrapper {
 		input[type='text'],
@@ -13,6 +16,14 @@
 
 		label.gfield_label {
 			display: none;
+		}
+	}
+
+	.gform_button {
+		width: 97.5%;
+
+		@include breakpoint(medium) {
+			width: auto;
 		}
 	}
 }

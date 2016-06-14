@@ -1,6 +1,6 @@
 .home-hero {
   background: color('grey');
-  height: 300px;
+  height: 175px;
   display: flex;
   align-items: center;
   text-align: center;
@@ -31,6 +31,7 @@
 .hero-tagline {
   font-family: $header-font-family;
   font-weight: $weight-light;
+  margin-bottom: 0;
 
   @include breakpoint(medium) {
     font-size: 2.5em;
@@ -42,12 +43,17 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 .home-what {
-  padding-top: 5em;
-  padding-bottom: 5em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+  @include breakpoint(medium) {
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
 
   .button {
     @include breakpoint(small only) {
-      margin-bottom: 4em;
+      margin-bottom: 2em;
     }
   }
 }
@@ -68,8 +74,12 @@
 
 .home-cta {
   background-color: color('grey', 'light');
-  padding-top: 5em;
-  padding-bottom: 5em;
+  padding-top: 2em;
+
+  @include breakpoint(medium) {
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
 }
 
 .home-cta-inner {
@@ -87,7 +97,16 @@
 .home-cta-box {
   background: color('white');
   font-size: .875em;
-  padding: 3em;
+  margin-left: -1.428571429em;
+  margin-right: -1.428571429em;
+  padding: 2em 1.4285714295em;
+
+
+  @include breakpoint(medium) {
+    padding: 3em;
+    margin-left: 0;
+    margin-right: 0;
+  }
 
   .button {
     margin-top: 2em;
@@ -146,7 +165,7 @@
 
 .what-we-do-copy {
   background: color('white');
-  padding: 4em 0;
+  padding: 2em 0;
 
   @include breakpoint(medium) {
     padding: 4em 3em;
