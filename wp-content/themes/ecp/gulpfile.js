@@ -85,7 +85,7 @@ gulp.task('styles', function() {
 		}))
 		)
 		.pipe(autoprefixer({
-			browsers: ['last 2 versions'],
+			browsers: ['last 2 versions', 'Safari >= 8', 'iOS >= 7'],
 			cascade: false
 		}))
 		.pipe(sourcemaps.write('.'))
