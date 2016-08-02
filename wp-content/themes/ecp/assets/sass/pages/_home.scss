@@ -1,5 +1,31 @@
 .post-archive-featured {
+  display: flex;
+  flex-direction: column;
   padding-bottom: 4em;
+
+  @include breakpoint(medium) {
+    flex-direction: row;
+  }
+}
+
+.post-archive-featured-thumb {
+  flex: 1 1 auto;
+  margin-bottom: 2em;
+
+  @include breakpoint(medium) {
+    order: 2;
+    margin-left: 2em;
+    margin-bottom: 0;
+    width: 41.6666%;
+  }
+}
+
+.post-archive-featured-content {
+  flex: 1 1 auto;
+
+  @include breakpoint(medium) {
+    width: 58.3333%;
+  }
 }
 
 .post-archive-container {
@@ -47,11 +73,13 @@
 
 .post-archive-thumb {
   flex: 1 0 auto;
+  margin-bottom: 2em;
   width: 100%;
 
   @include breakpoint(medium) {
     max-width: 300px;
     margin-right: 2em;
+    margin-bottom: 0;
   }
 }
 

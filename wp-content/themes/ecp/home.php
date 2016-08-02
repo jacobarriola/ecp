@@ -21,19 +21,21 @@ $query = new WP_Query( $args );
 
 if( $query->have_posts() ) : ?>
 
-  <div class="row post-archive-featured">
+  <div class="row column post-archive-featured">
     <?php	while ( $query->have_posts() ) : $query->the_post(); ?>
 
       <?php
       // Capture the post id of post that is in this component
       $excluded_posts[] = $post->ID;
+			if ( has_post_thumbnail() ) :
       ?>
-      <div class="medium-5 medium-push-7 columns">
-        <a href="<?php the_permalink(); ?>" title="Peramlink to <?php the_title(); ?>">
-          <?php the_post_thumbnail( '500x350' ); ?>
-        </a>
-      </div>
-      <div class="medium-7 columns medium-pull-5 post-archive-content">
+	      <div class="post-archive-featured-thumb">
+	        <a href="<?php the_permalink(); ?>" title="Peramlink to <?php the_title(); ?>">
+	          <?php the_post_thumbnail( '500x350' ); ?>
+	        </a>
+	      </div>
+			<?php endif; ?>
+      <div class="post-archive-featured-content">
         <h2 class="post-archive-featured-header">
           <a href="<?php the_permalink(); ?>" title="Peramlink to <?php the_title(); ?>">
             <?php the_title(); ?>
@@ -66,12 +68,13 @@ if ( $main_query->have_posts() ) : ?>
       <?php	while ( $main_query->have_posts() ) : $main_query->the_post(); ?>
 
         <div class="post-archive-block">
-
-          <div class="post-archive-thumb">
-            <a href="<?php the_permalink(); ?>" title="Peramlink to <?php the_title(); ?>">
-              <?php the_post_thumbnail( '500x350' ); ?>
-            </a>
-          </div>
+					<?php if ( has_post_thumbnail() ) : ?>
+	          <div class="post-archive-thumb">
+	            <a href="<?php the_permalink(); ?>" title="Peramlink to <?php the_title(); ?>">
+	              <?php the_post_thumbnail( '500x350' ); ?>
+	            </a>
+	          </div>
+					<?php endif; ?>
           <div class="post-archive-content">
             <h2 class="post-archive-header">
               <a href="<?php the_permalink(); ?>" title="Peramlink to <?php the_title(); ?>">
