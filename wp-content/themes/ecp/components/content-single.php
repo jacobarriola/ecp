@@ -18,9 +18,11 @@ if ( $thumb_placement ) {
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('single-post-container'); ?>>
 
-	<div class="single-thumbnail <?php echo $thumb_class; ?>">
-		<?php the_post_thumbnail( '500x350' ); ?>
-	</div>
+	<?php if ( has_post_thumbnail() ) : ?>
+		<div class="single-thumbnail <?php echo $thumb_class; ?>">
+			<?php the_post_thumbnail( '500x350' ); ?>
+		</div>
+	<?php endif; ?>
 
 	<div class="entry-content">
 
